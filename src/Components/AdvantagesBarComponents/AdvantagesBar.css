@@ -1,0 +1,29 @@
+.advantages-bar{
+    display: flex;
+    padding: 20px 20px;
+    border-bottom: 1px solid #313131;
+    justify-content: center;
+    margin: 20px 0;
+}
+.advantages-bar-item{
+    width: 20%;
+    padding: 10px;
+    justify-content: center;
+}
+.icon{
+    font-size: 50px;
+    color:royalblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    stroke: royalblue;
+}
+
+.item-title{
+    font-weight: bold;
+}
+
+.item-description{
+    font-size: 14px;
+}

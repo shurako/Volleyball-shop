@@ -1,0 +1,8 @@
+.social-media__wrapper{
+    align-items: center;
+
+}
+.social-media__wrapper div{
+    margin: 5px;
+    font-size: 20px;
+}

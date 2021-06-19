@@ -1,0 +1,66 @@
+.header{
+  display: flex;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: white;
+  width: 100%;
+}
+.logo{
+    font-family: 'Odibee Sans', cursive;
+    font-size: 2rem;
+    flex-basis: 30%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.login-section{
+    display: flex;
+}
+.main-nav__wrapper{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #313131; */
+    align-items: center;
+    border-bottom:1px solid #313131;
+}
+.nav-wrapper{
+  flex-grow: 1;
+}
+.nav {
+  display: flex;
+  /* width: 100%; */
+}
+div.main.nav {
+  /* justify-content: left; */
+  
+  /* color: white; */
+  font-weight: 600;
+}
+div.main.nav.item{
+    margin: 0;
+}
+div.nav.filter {
+  /* background-image: radial-gradient(
+    circle,
+    rgb(252, 62, 62),
+    rgb(255, 180, 180)
+  ); */
+  font-weight: bold;
+  /* color: #ffe4e4; */
+ 
+}
+
+.nav.item {
+  padding: 20px 20px;
+  
+}
+.input-wrapper{
+  width: 33%;
+  padding: 10px;
+}
+.input-wrapper input{
+  height: 24px;
+  width: 100%;
+}

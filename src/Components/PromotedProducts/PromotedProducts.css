@@ -1,0 +1,29 @@
+.section-title{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.promoted-products__wrapper{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    
+    width: 100%;
+}
+
+.product-title{
+    text-align: center;
+    font-weight: bold;
+}
+
+.product-price{
+    background-color: royalblue;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}

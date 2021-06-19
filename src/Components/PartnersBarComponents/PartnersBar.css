@@ -1,0 +1,19 @@
+.partners-bar{
+    display: flex;
+    
+    width: 100%;
+}
+
+.logo__wrapper{
+    max-height: 80px;
+    flex-basis: 20%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.logo__wrapper > img{
+    height: auto;
+    width: 100px;
+    object-fit: contain;
+}

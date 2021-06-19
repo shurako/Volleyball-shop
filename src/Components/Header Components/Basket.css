@@ -1,0 +1,11 @@
+.basket{
+    font-size:  40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.total{
+    font-size: 16px;
+    padding: 5px;
+}
