@@ -30,7 +30,7 @@ function App() {
       <Router>
         <Header total = {total} setTotal = {setTotal} headerSize = {headerSize} setHeaderSize = {setHeaderSize} />
         <Switch>
-          <Route total = {total} setTotal = {setTotal} path={"/shoes"} component={() => <ProductPage total = {total} setTotal = {setTotal} /> } />
+          <Route path={"/shoes"} component={() => <ProductPage total = {total} setTotal = {setTotal} /> } />
           <Route path={"/"} exact component={MainPage} />
         </Switch>
       </Router>

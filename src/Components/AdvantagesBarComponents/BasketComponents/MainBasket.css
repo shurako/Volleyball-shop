@@ -1,0 +1,65 @@
+.basket-window-header{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px;
+}
+.basket-window{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 500px;
+    min-height: 500px;
+    z-index: 5;
+    background-color: #f9f9f9;
+    font-size: 15px;
+}
+.basket-item__wrapper{
+    display: flex;
+    background-color: white;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    position: relative;
+}
+.basket-item__wrapper div:first-child img{
+    width: 100px;
+    height: auto;
+}
+.basket-item-data__wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 5px;
+}
+.basket-item-data__wrapper div:first-child{
+    display: flex;
+    flex-grow: 1;
+    font-size: 20px;
+    font-weight: 600;
+    width: 90%;
+}
+.basket-item-data__wrapper div:nth-child(2){
+    font-size: 25px;
+    font-weight: bold;
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    align-items: center;
+}
+.basket-item-data__wrapper div:nth-child(2) div:first-child{
+    font-size: 16px;
+    font-weight: normal;
+}
+.basketitem__close-btn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.basketitem__close-btn button {
+    font-size: 25px;
+    display: flex;
+    border: none;
+    background-color: transparent;
+}

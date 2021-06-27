@@ -10,6 +10,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import AdvantagesBar from "./AdvantagesBarComponents/AdvantagesBar";
 import CarouselMobile from "./CarouselMobile";
 
+
 function MainPage() {
   const renderCarousel =() => {
     if(window.innerHeight > window.innerWidth ){

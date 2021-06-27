@@ -3,10 +3,14 @@ import "./ProductCard.css";
 import { useSpring, animated } from "react-spring";
 import {AiOutlineHeart} from 'react-icons/ai'
 import Basket from "../Header Components/Basket";
+import {useSelector, useDispatch} from 'react-redux'
+import { increment } from '../../actions'
+import { add } from '../../actions'
 
 function ProductCard(props) {
   const [hover, setHover] = useState(false);
   const ref = useRef(Basket)
+  const dispatch = useDispatch()
 
   const fadeIn = useSpring({
     from: { opacity: 0 },
@@ -99,7 +103,7 @@ function ProductCard(props) {
       </div>
     
       
-      {hover ?  <animated.div onClick = {() => {}} price = {props.price} className = {'product-price'} style = {test}><p>{props.price}</p><p>Dodaj do koszyka</p> <p><AiOutlineHeart/></p> </animated.div>  : <div className={"product-price"}>{props.price}</div> }
+      {hover ?  <animated.div onClick = {() => {dispatch(increment(props.price)); dispatch(add({photo: props.photo, title : props.title, price : props.price }))}} price = {props.price} className = {'product-price'} style = {test}><p>{props.price}</p><p>Dodaj do koszyka</p> <p><AiOutlineHeart/></p> </animated.div>  : <div className={"product-price"}>{props.price}</div> }
     </div>
   );
 }
