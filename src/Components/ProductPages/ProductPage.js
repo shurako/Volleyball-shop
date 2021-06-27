@@ -1,14 +1,22 @@
 import React, { useState, useRef, useEffect } from "react";
+import ClearBtn from "./Buttons/ClearBtn";
 import ProductCard from "../ProductComponents/ProductCard";
 import { ProductData } from "../ProductData";
 import "./ProductPages.css";
 import { AiOutlineCaretDown } from "react-icons/ai";
+import {BsFilter} from 'react-icons/bs'
+import {useSpring, animated, useTransition} from 'react-spring'
+import { render } from "@testing-library/react";
+import { GiHidden } from "react-icons/gi";
 
-function ProductPage() {
+function ProductPage(props) {
   const revealRefs = useRef([]);
   revealRefs.current = [];
+  const filteredArray = [];
   const [viewAll, setviewAll] = useState(true);
   const [searchTerm, setSearchTerm] = useState([]);
+  
+  
   const [sizeTable, setSizeTable] = useState({
     params: {
       title: "Rozmiar",
@@ -116,9 +124,6 @@ function ProductPage() {
     ],
   });
 
-  console.log(colorTable);
-
-  const filteredArray = [];
 
   const addFilterTerm = (item) => {
     setSearchTerm([...searchTerm, item]);
@@ -166,8 +171,8 @@ function ProductPage() {
   const renderAll = () => {
     return (
       <div className = {'main-section'}>
-          <div className ={'section-title'}>POLECAMY</div>
-          {ProductData.map(items => {return(<div className = {'promoted-products__wrapper'}>{items.shoes.map(item => {return(<ProductCard size = {item.size} photo = {item.photo} price = {item.price} title = {item.title}/>)})} </div>)})}
+          <div className  ={'section-title'}>POLECAMY</div>
+          {ProductData.map(items => {return(<div className = {'promoted-products__wrapper'}>{items.shoes.map(item => {return(<ProductCard total = {props.total} setTotal = {props.setTotal}  size = {item.size} photo = {item.photo} price = {item.price} title = {item.title}/>)})} </div>)})}
  
 
        
@@ -175,6 +180,13 @@ function ProductPage() {
   )
   };
   //FUNCTION RENDERS FILTERED OBJECTS
+  const [slideFilters, setSlideFilters] = useState(false);
+  const transitions = useTransition(slideFilters, {
+    from : {opacity : 0, y : '-100%', overflow : 'hidden', width : '100%', justifyContent : 'center', display : 'flex', flexDirection : 'column', alignItems : 'center'},
+    enter : {opacity : 1, y : '0%', overflow : 'hidden',  },
+    leave : {opacity : 0, y : '-100%', overflow : 'hidden',},
+    config : {duration : 150}
+  })
   const renderFiltered = () => {
     createFilteredArray(ProductData[0].shoes);
     let test = [];
@@ -197,15 +209,17 @@ function ProductPage() {
     });
 
     return (
-      <div className={"promoted-products__wrapper"}>
+      <div  className={"promoted-products__wrapper"}>
         {" "}
         {test.map((item) => {
           return (
             <ProductCard
+              
               size={item.size}
               price={item.price}
               title={item.title}
               photo={item.photo}
+            
             />
           );
         })}
@@ -226,10 +240,10 @@ function ProductPage() {
   //RENDER FILTERS
   const renderFilters = (prop, setprop, j) => {
 
-    return (
+    return(
       <div className={"filter-section__item"}>
         <div className={"filter-section__header"}>
-          {" "}
+          
           <div className={"filter-section__header-title"}>
             <p
               onClick={() => {
@@ -284,13 +298,23 @@ function ProductPage() {
     );
   };
 
+
+
   return (
-    <div className={"flex"}>
+    <div className={"flex mobile"}>
+      <div className = {'filter-section__wrapper'} >
       <div className={"filter-section"}>
-        <h3>Filtry:</h3>
-        {renderFilters(sizeTable, setSizeTable, 0)}
+        <div onClick = {() => setSlideFilters(!slideFilters)} className = {'title__wrapper'}><BsFilter/><h3>Filtry</h3></div>
+         
+        {transitions((styles, item) => item ? <animated.div style = {styles}>{renderFilters(sizeTable, setSizeTable, 0)}
         {renderFilters(colorTable, setColorTable, sizeTable.values.length)}
-        <div><button onClick = {() => {setviewAll(true)}}>wyczyść</button></div>
+         <ClearBtn viewAll = {viewAll} setviewAll = {setviewAll} /></animated.div> : <div></div> )}
+         
+         
+         
+        
+        
+      </div>
       </div>
       {viewAll ? renderAll() : renderFiltered()}
     </div>

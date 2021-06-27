@@ -8,6 +8,7 @@
 }
 .main-section{
   margin: 40px 0;
+  width: 100%;
 }
 .flex{
   display: flex;

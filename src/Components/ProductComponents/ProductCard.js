@@ -1,40 +1,77 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./ProductCard.css";
-import {useSpring, animated} from 'react-spring'
-
+import { useSpring, animated } from "react-spring";
+import {AiOutlineHeart} from 'react-icons/ai'
+import Basket from "../Header Components/Basket";
 
 function ProductCard(props) {
   const [hover, setHover] = useState(false);
+  const ref = useRef(Basket)
+
   const fadeIn = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    reset : true,
+  });
+  const titleAnimation = useSpring({
+    from : {
+      transform : 'translateY(0px)'
+    },
+    
+    to: {
+      transform: "translateY(-100px)",
+    },
+    reset : true,
+    duration : 1500,
+    
+  });
+  const tablefadeIn = useSpring({
     from : {opacity : 0},
     to : {opacity : 1},
-    reset : true
+    config : {duration : 1000, trail : 200},
+    reset : true,
+    
+    
+    
+   
+  });
+  
+  
+  const test = useSpring({
+    from : {
+    
+      width: '0%',
+      backgroundColor : '#303030',
+      wordBreak : 'keep-all',
+    
+    },
+    to: {
+      width : '100%',
+      color : 'white'
+    },
+    config : {duration : 200},
+    reset : true,
+    
   })
 
-
   const isHovered = () => {
-    console.log("hovered");
     return (
-      <animated.div style = { hover ? fadeIn : ''} className={"hovered"}>
+      // style={hover ? fadeIn : ""}
+      <animated.div  className={"hovered"}>
         <div>
-            <div>
-                <button className = {'product-btn btn-1'}>SZCZEGÓŁY</button>
-                <button className = {'product-btn'}>DO KOSZYKA</button>
-            </div>
-            
-            
+      
         </div>
         <div className={"size-table"}>
-          <div className={"item__wrapper"}>
+          <animated.div  style =  {hover ? tablefadeIn : null} className={"item__wrapper"}>
             {props.size.map((item) => {
               return (
-
                 <div>
                   <div className={"size-table-item"}>{item}</div>
                 </div>
+                
               );
             })}
-          </div>
+          </animated.div>
         </div>
       </animated.div>
     );
@@ -50,12 +87,19 @@ function ProductCard(props) {
       }}
       className={"product-card"}
     >
-      <div className={"product-title"}>{props.title}</div>
+        <animated.div
+        className={"product-title"}
+      >
+        {props.title}
+      </animated.div>
       <div className={"product-photo"}>
         <img src={props.photo} />
         {hover ? isHovered() : ""}
+       
       </div>
-      <div className={"product-price"}>{props.price}</div>
+    
+      
+      {hover ?  <animated.div onClick = {() => {}} price = {props.price} className = {'product-price'} style = {test}><p>{props.price}</p><p>Dodaj do koszyka</p> <p><AiOutlineHeart/></p> </animated.div>  : <div className={"product-price"}>{props.price}</div> }
     </div>
   );
 }

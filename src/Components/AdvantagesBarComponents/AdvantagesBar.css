@@ -27,3 +27,18 @@
 .item-description{
     font-size: 14px;
 }
+
+@media (orientation: portrait) {
+    .advantages-bar{
+        display: flex;
+        padding: 0;
+        margin: 20px 0;
+        flex-direction: column;
+    }
+
+    .advantages-bar-item{
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+}

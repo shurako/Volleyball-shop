@@ -1,0 +1,10 @@
+.btn.clear{
+    width: 92%;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: royalblue;
+    border: none;
+    border-radius: 5px;
+}

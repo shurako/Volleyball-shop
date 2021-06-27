@@ -8,12 +8,23 @@ import PromotedProducts from './PromotedProducts/PromotedProducts';
 import PartnersBar from './PartnersBarComponents/PartnersBar';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import AdvantagesBar from "./AdvantagesBarComponents/AdvantagesBar";
+import CarouselMobile from "./CarouselMobile";
 
 function MainPage() {
+  const renderCarousel =() => {
+    if(window.innerHeight > window.innerWidth ){
+      return(<CarouselMobile/>)
+    }
+    else if(window.innerHeight < window.innerWidth ){
+      return(<Carousel/>)
+    }
+  }
+
+
   return (
     <div>
       <div>
-        <Carousel />
+        {renderCarousel()}
       </div>
       <AdvantagesBar/>
       <PromotedProducts />

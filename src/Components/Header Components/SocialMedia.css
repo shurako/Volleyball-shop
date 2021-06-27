@@ -6,3 +6,10 @@
     margin: 5px;
     font-size: 20px;
 }
+
+@media(orientation: portrait){
+    .social-media__wrapper{
+        display: none;
+    
+    }
+}

@@ -1,13 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Basket.css'
 import { FaShoppingBasket } from 'react-icons/fa'
 
 
-function Basket() {
+function Basket(props) {
+    const [total, setTotal] = useState(0)
+
+
     return (
         <div className = {'basket'}>
             <FaShoppingBasket/>
-            <div className = {'total'}> 0 zł</div>
+            <div className = {'total'}>{total} zł</div>
 
         </div>
     )
