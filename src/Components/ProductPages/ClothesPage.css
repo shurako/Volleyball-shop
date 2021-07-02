@@ -14,3 +14,13 @@
 .product{
     max-width:  200px;
 }
+
+.filter__wrapper div{
+    flex-basis: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.active{
+    background-color: royalblue;
+}
