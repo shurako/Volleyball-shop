@@ -5,18 +5,14 @@ const basketData = (state = [], action) => {
       return [...state, action.payload];
     }
     case "REMOVE": {
-      const selection = state;
-      const itemPos = state.indexOf(action.payload);
-
-      if (selection.includes(action.payload)) {
-        const { [itemPos]: item, ...rest } = selection;
-        return [rest];
+        return state.filter(element => element !== action.payload);
       }
       
+      default : return state;
     }
-    default : return state;
+    
       
   }
-};
+
 
 export default basketData;

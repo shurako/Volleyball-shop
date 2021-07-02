@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MainPage from "./Components/MainPage";
 import ProductCard from "./Components/ProductComponents/ProductCard";
 import ProductPage from "./Components/ProductPages/ProductPage";
+import ClothesPage from "./Components/ProductPages/ClothesPage";
 
 function App() {
   
@@ -31,6 +32,7 @@ function App() {
         <Header total = {total} setTotal = {setTotal} headerSize = {headerSize} setHeaderSize = {setHeaderSize} />
         <Switch>
           <Route path={"/shoes"} component={() => <ProductPage total = {total} setTotal = {setTotal} /> } />
+          <Route path={"/clothes"} component={() => <ClothesPage/> } />
           <Route path={"/"} exact component={MainPage} />
         </Switch>
       </Router>

@@ -13,6 +13,10 @@
     background-color: #f9f9f9;
     font-size: 15px;
 }
+.basket-window.hide{
+    display: none;
+}
+
 .basket-item__wrapper{
     display: flex;
     background-color: white;

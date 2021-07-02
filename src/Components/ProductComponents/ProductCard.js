@@ -103,7 +103,7 @@ function ProductCard(props) {
       </div>
     
       
-      {hover ?  <animated.div onClick = {() => {dispatch(increment(props.price)); dispatch(add({photo: props.photo, title : props.title, price : props.price }))}} price = {props.price} className = {'product-price'} style = {test}><p>{props.price}</p><p>Dodaj do koszyka</p> <p><AiOutlineHeart/></p> </animated.div>  : <div className={"product-price"}>{props.price}</div> }
+      {hover ?  <animated.div onClick = {() => { dispatch(add({photo: props.photo, title : props.title, price : props.price })); dispatch(increment(props.price));}} price = {props.price} className = {'product-price'} style = {test}><p>{props.price}</p><p>Dodaj do koszyka</p> <p><AiOutlineHeart/></p> </animated.div>  : <div price = {props.price} className={"product-price"}>{props.price}</div> }
     </div>
   );
 }
