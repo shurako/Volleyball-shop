@@ -12,7 +12,8 @@ color : ['red'],
 filterProperties : []
 
 },
-{ category : 'shoes',
+{ 
+category : 'shoes',
 photo: "miz1.jpg",
 brand : 'Mizuno',
 title: "Mizuno Wave Momentum",
@@ -116,7 +117,7 @@ price: 399,
 desciption: "",
 id: "1",
 promoted: false,
-size : ['38','45','39', '40', '41'], 
+size : ['38', '39'],
 color : [ 'white','pink'],
 filterProperties : []
 },

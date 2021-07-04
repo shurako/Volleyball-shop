@@ -10,23 +10,10 @@ function ClothesPage() {
     const filterKey = useSelector((state) => state.FilterKey )
     const products = useSelector((state) => state.ProductDB)
     const dispatch = useDispatch()
-    
-    
 
-    const filter =  products.filter(product =>  filterKey.every(filter => filter.value.includes(product[filter.key])))
-    
+    const filter =  products.filter(product =>  filterKey.every(filter => { if(!Array.isArray(product[filter.key])){return filter.value.includes(product[filter.key]) }else {return filter.value.some( value => product[filter.key].includes(value) ) } }   ))
     const render = filter.map((product, i) => {return (<div className = {'product__wrapper'}> <Product product = {product}/></div>) })
 
-    
- 
-
-   
-   
-
-      
-      
-      
- 
 
     return (
         <div className = {'products-section'}>

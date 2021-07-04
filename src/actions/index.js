@@ -57,3 +57,10 @@ export const removeFilter = (data) => {
     payload : data
   }
 }
+
+export const setCategory = (data) => {
+  return{
+    type : 'SET_CATEGORY',
+    payload : data
+  }
+}
