@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/Volleyball-shop/static/css/main.1dbf2dbf.chunk.css",
-    "main.js": "/Volleyball-shop/static/js/main.a7a44889.chunk.js",
-    "main.js.map": "/Volleyball-shop/static/js/main.a7a44889.chunk.js.map",
-    "runtime-main.js": "/Volleyball-shop/static/js/runtime-main.501f161a.js",
-    "runtime-main.js.map": "/Volleyball-shop/static/js/runtime-main.501f161a.js.map",
-    "static/css/2.6b560088.chunk.css": "/Volleyball-shop/static/css/2.6b560088.chunk.css",
-    "static/js/2.43bbafe1.chunk.js": "/Volleyball-shop/static/js/2.43bbafe1.chunk.js",
-    "static/js/2.43bbafe1.chunk.js.map": "/Volleyball-shop/static/js/2.43bbafe1.chunk.js.map",
-    "static/js/3.d6f2c95c.chunk.js": "/Volleyball-shop/static/js/3.d6f2c95c.chunk.js",
-    "static/js/3.d6f2c95c.chunk.js.map": "/Volleyball-shop/static/js/3.d6f2c95c.chunk.js.map",
-    "index.html": "/Volleyball-shop/index.html",
-    "static/css/2.6b560088.chunk.css.map": "/Volleyball-shop/static/css/2.6b560088.chunk.css.map",
-    "static/css/main.1dbf2dbf.chunk.css.map": "/Volleyball-shop/static/css/main.1dbf2dbf.chunk.css.map",
-    "static/js/2.43bbafe1.chunk.js.LICENSE.txt": "/Volleyball-shop/static/js/2.43bbafe1.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.1dbf2dbf.chunk.css",
+    "main.js": "/static/js/main.a7a44889.chunk.js",
+    "main.js.map": "/static/js/main.a7a44889.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.806cd914.js",
+    "runtime-main.js.map": "/static/js/runtime-main.806cd914.js.map",
+    "static/css/2.6b560088.chunk.css": "/static/css/2.6b560088.chunk.css",
+    "static/js/2.a6d0cf86.chunk.js": "/static/js/2.a6d0cf86.chunk.js",
+    "static/js/2.a6d0cf86.chunk.js.map": "/static/js/2.a6d0cf86.chunk.js.map",
+    "static/js/3.d6f2c95c.chunk.js": "/static/js/3.d6f2c95c.chunk.js",
+    "static/js/3.d6f2c95c.chunk.js.map": "/static/js/3.d6f2c95c.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.6b560088.chunk.css.map": "/static/css/2.6b560088.chunk.css.map",
+    "static/css/main.1dbf2dbf.chunk.css.map": "/static/css/main.1dbf2dbf.chunk.css.map",
+    "static/js/2.a6d0cf86.chunk.js.LICENSE.txt": "/static/js/2.a6d0cf86.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.501f161a.js",
+    "static/js/runtime-main.806cd914.js",
     "static/css/2.6b560088.chunk.css",
-    "static/js/2.43bbafe1.chunk.js",
+    "static/js/2.a6d0cf86.chunk.js",
     "static/css/main.1dbf2dbf.chunk.css",
     "static/js/main.a7a44889.chunk.js"
   ]
