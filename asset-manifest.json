@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Volleyball-shop/static/css/main.a044e1ba.chunk.css",
+    "main.css": "/Volleyball-shop/static/css/main.d5946863.chunk.css",
     "main.js": "/Volleyball-shop/static/js/main.972021d3.chunk.js",
     "main.js.map": "/Volleyball-shop/static/js/main.972021d3.chunk.js.map",
     "runtime-main.js": "/Volleyball-shop/static/js/runtime-main.c06099de.js",
@@ -12,14 +12,14 @@
     "static/js/3.7ac7bbcf.chunk.js.map": "/Volleyball-shop/static/js/3.7ac7bbcf.chunk.js.map",
     "index.html": "/Volleyball-shop/index.html",
     "static/css/2.6b560088.chunk.css.map": "/Volleyball-shop/static/css/2.6b560088.chunk.css.map",
-    "static/css/main.a044e1ba.chunk.css.map": "/Volleyball-shop/static/css/main.a044e1ba.chunk.css.map",
+    "static/css/main.d5946863.chunk.css.map": "/Volleyball-shop/static/css/main.d5946863.chunk.css.map",
     "static/js/2.c3c13202.chunk.js.LICENSE.txt": "/Volleyball-shop/static/js/2.c3c13202.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c06099de.js",
     "static/css/2.6b560088.chunk.css",
     "static/js/2.c3c13202.chunk.js",
-    "static/css/main.a044e1ba.chunk.css",
+    "static/css/main.d5946863.chunk.css",
     "static/js/main.972021d3.chunk.js"
   ]
 }
