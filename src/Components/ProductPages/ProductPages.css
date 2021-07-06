@@ -33,14 +33,7 @@
     width: 100%;
 
 }
-.filter-section__item{
-    padding: 5px;
-    /* background-color: #4e4e4e; */
-    width: 100%;
-    margin: 5px;
-    flex-direction: column;
-    display: flex;
-}
+
 .filter-section > div h3 {
     width: 100%;
     padding: 10px 10px;
@@ -75,6 +68,7 @@
     .title__wrapper{
         display: flex;
         align-items: center;
+        
       
     }
     .title__wrapper svg{
@@ -82,9 +76,14 @@
     }
     .filter-section__wrapper{
         width: 100%;
+        max-height: 80vh;
+        position: sticky;
+        top: 123px;
+        z-index: 4;
+        overflow-y: scroll;
     }
     .filter-section{
-        position: fixed;
+        position: inherit;
         min-height: auto;
         width: 100%;
         padding: 10px 0;
@@ -96,6 +95,9 @@
     }
 
     .flex.mobile{
+        flex-direction: column;
+    }
+    .prodcut-section{
         flex-direction: column;
     }
 }

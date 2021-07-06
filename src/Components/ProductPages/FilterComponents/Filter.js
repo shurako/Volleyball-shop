@@ -1,81 +1,13 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import '../ClothesPage.css'
 import { addFilter, removeFilter } from "../../../actions";
 import FilterProp from "./FilterProp";
+import {BsFilter} from 'react-icons/bs'
+import {animated, useSpring, useTransition} from 'react-spring'
 
 function Filter() {
-  const filterKey = useSelector((state) => state.FilterKey )
   const dispatch = useDispatch();
-
-  const [shoesSizeTable, setShoesSizeTable] = useState({
-    params: {
-      title: "Rozmiar",
-      icon: "",
-      showFilterOptions: true,
-      style: {},
-      key : 'size'
-    },
-    values: [
-      {
-        value: "37",
-        isCkecked: false,
-      },
-      {
-        value: "38",
-        isCkecked: false,
-      },
-      {
-        value: "39",
-        isCkecked: false,
-      },
-      {
-        value: "40",
-        isCkecked: false,
-      },
-      {
-        value: "41",
-        isCkecked: false,
-      },
-      {
-        value: "42",
-        isCkecked: false,
-      },
-      {
-        value: "43",
-        isCkecked: false,
-      },
-      {
-        value: "44",
-        isCkecked: false,
-      },
-      {
-        value: "45",
-        isCkecked: false,
-      },
-      {
-        value: "46",
-        isCkecked: false,
-      },
-      {
-        value: "47",
-        isCkecked: false,
-      },
-      {
-        value: "48",
-        isCkecked: false,
-      },
-      {
-        value: "49",
-        isCkecked: false,
-      },
-      {
-        value: "50",
-        isCkecked: false,
-      },
-    ],
-  });
-
   const [brandTable, setBrandTable] = useState({
     params: {
       title: "Marka",
@@ -104,12 +36,47 @@ function Filter() {
     ],
   });
 
+<<<<<<< HEAD
+  const [shirtsSizeTable, setShirtsSizeTable] = useState({
+    params: {
+      title: "Rozmiar",
+      icon: "",
+      showFilterOptions: true,
+      style: {},
+      key: "size",
+    },
+    values: [
+      {
+        value: "S",
+        isCkecked: false,
+      },
+      {
+        value: "M",
+        isCkecked: false,
+      },
+      {
+        value: "L",
+        isCkecked: false,
+      },
+      {
+        value: "XL",
+        isCkecked: false,
+      },
+      {
+        value: "XXL",
+        isCkecked: false,
+      },
+    ],
+  });
+
+=======
+  
+>>>>>>> parent of 19dc26c (Filter bug fix)
   const [colorTable, setColorTable] = useState({
     params: {
       title: "Kolor",
       icon: "",
       showFilterOptions: false,
-      key : 'color',
       style: {
         display: "flex",
         width: "30%",
@@ -145,18 +112,41 @@ function Filter() {
     ],
   });
 
+<<<<<<< HEAD
+  const isMobile = useSelector(state => state.setShowMobile)
+  const [slideFilters, setSlideFilters] = useState(false)
+  
+  const transitions = useTransition(slideFilters, {
+    from : {opacity : 0, y : '0%', overflow : 'hidden', width : '100%', flexDirection : 'column',  display : 'flex',alignItems : 'center'},
+    enter : {opacity : 1, y : '0%', overflow : 'hidden',  },
+    leave : {opacity : 0, y : '-100%', overflow : 'hidden',},
+    config : {duration : 150}
+  })
+
   const handleCategory = () => {
     
     const item = filterKey.filter(item => item.key == 'category');
     if(item[0].value == 'shoes'){return shoesSizeTable}
-    else return colorTable
+    else return shirtsSizeTable
   }
   return (
     <div className={"filter-section__wrapper"}>
       <div className = {'filter-section'}>
-        <FilterProp filterProp = {handleCategory()} />
+      <div onClick = {() => setSlideFilters(!slideFilters)} className = {'title__wrapper'}><BsFilter/><h3>Filtry</h3></div>
+        {transitions( (styles, item) => item ? 
+        <animated.div style = {styles}>
+          <FilterProp filterProp = {handleCategory()} />
+          <FilterProp filterProp = {brandTable} />
+          <FilterProp filterProp = {colorTable} />
+        </animated.div> : '') }
+        
+=======
+  return (
+    <div className={"filter-section__wrapper"}>
+      <div className = {'filter-section'}>
         <FilterProp filterProp = {brandTable} />
         <FilterProp filterProp = {colorTable} />
+>>>>>>> parent of 19dc26c (Filter bug fix)
       </div>
         
     </div>

@@ -1,15 +1,9 @@
 .products-section{
     display: flex;
     justify-content: center;
+    flex-direction: row;
 }
-.product__wrapper{
-    flex-basis: 30%;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    flex-shrink: 0;
-    flex-grow: 0;
-}
+
 
 .product{
     max-width:  200px;
@@ -23,4 +17,26 @@
 
 .active{
     background-color: royalblue;
+}
+
+.filter-section__item {
+    padding: 5px;
+    /* background-color: #4e4e4e; */
+    width: 100%;
+
+    flex-direction: column;
+    display: flex;
+}
+
+.filter-section > div h3 {
+    width: 100%;
+    padding: 10px 3px;
+}
+
+@media (orientation: portrait){
+    .products-section{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 }

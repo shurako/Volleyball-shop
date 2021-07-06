@@ -7,8 +7,9 @@
   min-height: 100vh;
 }
 .main-section{
-  margin: 40px 0;
+  margin: 40px auto;
   width: 100%;
+  max-width: 1480px;
 }
 .flex{
   display: flex;
@@ -31,6 +32,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+@media (orientation: portrait){
+  
 }
 
 @keyframes App-logo-spin {

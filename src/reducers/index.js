@@ -4,6 +4,8 @@ import isBasketShown from './isBasketShown'
 import ProductDB from "./ProductDB";
 import { combineReducers } from "redux";
 import FilterKey from "./FilterKey";
+import setMobileView from "./setMobileView";
+import headerHeight from "./headerHeight";
 
 const allReducers = combineReducers({
     counterReducer,
@@ -11,6 +13,8 @@ const allReducers = combineReducers({
     isBasketShown,
     ProductDB,
     FilterKey,
+    setMobileView,
+    headerHeight,
     
 })
 

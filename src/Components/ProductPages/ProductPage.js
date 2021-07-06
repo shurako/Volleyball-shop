@@ -84,10 +84,6 @@ function ProductPage(props) {
     ],
   });
 
-
-  
-
-
   const [colorTable, setColorTable] = useState({
     params: {
       title: "Kolor",

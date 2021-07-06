@@ -1,4 +1,5 @@
 import React from 'react'
+import './LoginSection.css'
 
 function LoginSection() {
     return (

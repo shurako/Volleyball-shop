@@ -56,6 +56,7 @@ export const removeFilter = (data) => {
     type : 'REMOVE_FILTER',
     payload : data
   }
+<<<<<<< HEAD
 }
 
 export const setCategory = (data) => {
@@ -63,4 +64,24 @@ export const setCategory = (data) => {
     type : 'SET_CATEGORY',
     payload : data
   }
+}
+
+export const setMobile = () => {
+  return{
+    type : 'SET_MOBILE',
+  }
+}
+export const setDesktop = () => {
+  return{
+    type : 'SET_DESKTOP',
+  }
+}
+
+export const headerHeight = (data) => {
+  return{
+    type : 'HEADER_HEIGHT',
+    payload : data,
+  }
+=======
+>>>>>>> parent of 19dc26c (Filter bug fix)
 }

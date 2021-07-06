@@ -150,6 +150,7 @@ export const ProductData = [
     ],
 
     shirts : [ {
+        category : 'shirts',
         photo: "products photo/shirts/k1.jpg",
         title: "Nike Air Zoom Hyperace 2",
         price: 399,
