@@ -56,7 +56,6 @@ export const removeFilter = (data) => {
     type : 'REMOVE_FILTER',
     payload : data
   }
-<<<<<<< HEAD
 }
 
 export const setCategory = (data) => {
@@ -82,6 +81,4 @@ export const headerHeight = (data) => {
     type : 'HEADER_HEIGHT',
     payload : data,
   }
-=======
->>>>>>> parent of 19dc26c (Filter bug fix)
 }

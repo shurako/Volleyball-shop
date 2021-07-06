@@ -1,34 +1,16 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
+import { AiOutlineHeart } from 'react-icons/ai';
+import { useDispatch } from 'react-redux';
+import { animated, useSpring } from "react-spring";
+import { add, increment } from '../../actions';
 import "./ProductCard.css";
-import { useSpring, animated } from "react-spring";
-import {AiOutlineHeart} from 'react-icons/ai'
-import Basket from "../Header Components/Basket";
-import {useSelector, useDispatch} from 'react-redux'
-import { increment } from '../../actions'
-import { add } from '../../actions'
 
 function ProductCard(props) {
   const [hover, setHover] = useState(false);
-  const ref = useRef(Basket)
+
   const dispatch = useDispatch()
 
-  const fadeIn = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    reset : true,
-  });
-  const titleAnimation = useSpring({
-    from : {
-      transform : 'translateY(0px)'
-    },
-    
-    to: {
-      transform: "translateY(-100px)",
-    },
-    reset : true,
-    duration : 1500,
-    
-  });
+
   const tablefadeIn = useSpring({
     from : {opacity : 0},
     to : {opacity : 1},
@@ -60,7 +42,7 @@ function ProductCard(props) {
 
   const isHovered = () => {
     return (
-      // style={hover ? fadeIn : ""}
+
       <animated.div  className={"hovered"}>
         <div>
       
@@ -97,7 +79,7 @@ function ProductCard(props) {
         {props.title}
       </animated.div>
       <div className={"product-photo"}>
-        <img src={props.photo} />
+     
         {hover ? isHovered() : ""}
        
       </div>

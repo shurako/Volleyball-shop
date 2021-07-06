@@ -17,7 +17,7 @@ function PromotedProducts() {
   
 
   const filter =  products.filter(product =>  filterKey.every(filter => { if(!Array.isArray(product[filter.key])){return filter.value.includes(product[filter.key]) }else {return filter.value.some( value => product[filter.key].includes(value) ) } }   ))
-  const render = filter.map((product, i) => {return (<div className = {'product__wrapper'}> <Product product = {product}/></div>) })
+  const render = filter.map((product, key) => {return (<div key = {key} className = {'product__wrapper'}> <Product product = {product}/></div>) })
   
 
   return (

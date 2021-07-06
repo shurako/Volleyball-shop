@@ -1,25 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useDispatch } from 'react-redux';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { setCategory, setDesktop, setMobile } from "./actions";
 import "./App.css";
 import Header from "./Components/Header Components/Header";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import {useDispatch} from 'react-redux'
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MainPage from "./Components/MainPage";
-import ProductPage from "./Components/ProductPages/ProductPage";
 import ClothesPage from "./Components/ProductPages/ClothesPage";
-import { setCategory, setDesktop, setProducts } from "./actions";
-import setMobileView from "./reducers/setMobileView";
-import { setMobile } from "./actions";
+import ProductPage from "./Components/ProductPages/ProductPage";
 
 function App() {
   
   const [total, setTotal] = useState(0)
   const dispatch = useDispatch()
 
-  const [windowSize, setwindowSize] = useState(window.innerWidth);
-  const handleResize = () => {
-    setwindowSize(window.innerWidth);
-  };
+  
 
   const resize = () => {
     if(window.innerWidth < window.innerHeight){

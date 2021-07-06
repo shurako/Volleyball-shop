@@ -1,13 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
-import ClearBtn from "./Buttons/ClearBtn";
+import React, { useRef, useState } from "react";
+import { AiOutlineCaretDown } from "react-icons/ai";
+import { BsFilter } from 'react-icons/bs';
+import { animated, useTransition } from 'react-spring';
 import ProductCard from "../ProductComponents/ProductCard";
 import { ProductData } from "../ProductData";
+import ClearBtn from "./Buttons/ClearBtn";
 import "./ProductPages.css";
-import { AiOutlineCaretDown } from "react-icons/ai";
-import {BsFilter} from 'react-icons/bs'
-import {useSpring, animated, useTransition} from 'react-spring'
-import { render } from "@testing-library/react";
-import { GiHidden } from "react-icons/gi";
 
 function ProductPage(props) {
   const revealRefs = useRef([]);

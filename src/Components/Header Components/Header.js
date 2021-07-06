@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useSpring, animated, useTransition } from "react-spring";
+import {animated, useTransition } from "react-spring";
 import Nav from "./Nav";
 import "./Header.css";
 import MainNav from "./MainNav";
@@ -7,12 +7,11 @@ import HeaderMainSection from "./HeaderMainSection";
 import LoginSection from "./LoginSection";
 import Basket from "./Basket";
 import SocialMedia from "./SocialMedia";
-import { render } from "@testing-library/react";
-import { useDispatch } from "react-redux";
-import { headerHeight } from "../../actions";
+
+
 
 function Header(props) {
-  const dispatch = useDispatch()
+
 
 
   const header = useRef(<div></div>);

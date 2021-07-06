@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
-import AdvantagesBarItem from './AdvantagesBarItem'
-import {FaThumbsUp} from 'react-icons/fa'
-import {Ri24HoursLine} from 'react-icons/ri'
-import {HiTruck} from 'react-icons/hi'
-import{GiReturnArrow} from 'react-icons/gi'
-
+import React from 'react'
+import { FaThumbsUp } from 'react-icons/fa'
+import { GiReturnArrow } from 'react-icons/gi'
+import { HiTruck } from 'react-icons/hi'
+import { Ri24HoursLine } from 'react-icons/ri'
 import './AdvantagesBar.css'
+import AdvantagesBarItem from './AdvantagesBarItem'
+
 
 function AdvantagesBar() {
 

@@ -7,19 +7,19 @@ function PartnersBar() {
         <div className = {'section-title'}>PARTNERZY</div>
       <div className={"partners-bar"}>
         <div className={"logo__wrapper"}>
-          <img src={"partners logo/adidas.png"} />
+          <img alt = {''} src={"partners logo/adidas.png"} />
         </div>
         <div className={"logo__wrapper"}>
-          <img src={"partners logo/asics.png"} />
+          <img alt = {''} src={"partners logo/asics.png"} />
         </div>
         <div className={"logo__wrapper"}>
-          <img src={"partners logo/mizuno.png"} />
+          <img alt = {''} src={"partners logo/mizuno.png"} />
         </div>
         <div className={"logo__wrapper"}>
-          <img src={"partners logo/nike.png"} />
+          <img alt = {''} src={"partners logo/nike.png"} />
         </div>
         <div className={"logo__wrapper"}>
-          <img src={"partners logo/underarmor.png"} />
+          <img alt = {''} src={"partners logo/underarmor.png"} />
         </div>
       </div>
     </div>

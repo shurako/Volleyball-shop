@@ -1,13 +1,83 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import '../ClothesPage.css'
-import { addFilter, removeFilter } from "../../../actions";
+import { BsFilter } from 'react-icons/bs';
+import { useDispatch, useSelector } from "react-redux";
+import { animated, useTransition } from 'react-spring';
+import '../ClothesPage.css';
 import FilterProp from "./FilterProp";
-import {BsFilter} from 'react-icons/bs'
-import {animated, useSpring, useTransition} from 'react-spring'
 
 function Filter() {
-  const dispatch = useDispatch();
+
+  const filterKey = useSelector(state => state.FilterKey)
+
+  const [shoesSizeTable] = useState({
+    params: {
+      title: "Rozmiar",
+      icon: "",
+      showFilterOptions: true,
+      style: {},
+      key : 'size'
+    },
+    values: [
+      {
+        value: "37",
+        isCkecked: false,
+      },
+      {
+        value: "38",
+        isCkecked: false,
+      },
+      {
+        value: "39",
+        isCkecked: false,
+      },
+      {
+        value: "40",
+        isCkecked: false,
+      },
+      {
+        value: "41",
+        isCkecked: false,
+      },
+      {
+        value: "42",
+        isCkecked: false,
+      },
+      {
+        value: "43",
+        isCkecked: false,
+      },
+      {
+        value: "44",
+        isCkecked: false,
+      },
+      {
+        value: "45",
+        isCkecked: false,
+      },
+      {
+        value: "46",
+        isCkecked: false,
+      },
+      {
+        value: "47",
+        isCkecked: false,
+      },
+      {
+        value: "48",
+        isCkecked: false,
+      },
+      {
+        value: "49",
+        isCkecked: false,
+      },
+      {
+        value: "50",
+        isCkecked: false,
+      },
+    ],
+  });
+
+
   const [brandTable, setBrandTable] = useState({
     params: {
       title: "Marka",
@@ -36,8 +106,7 @@ function Filter() {
     ],
   });
 
-<<<<<<< HEAD
-  const [shirtsSizeTable, setShirtsSizeTable] = useState({
+  const [shirtsSizeTable] = useState({
     params: {
       title: "Rozmiar",
       icon: "",
@@ -69,10 +138,7 @@ function Filter() {
     ],
   });
 
-=======
-  
->>>>>>> parent of 19dc26c (Filter bug fix)
-  const [colorTable, setColorTable] = useState({
+  const [colorTable] = useState({
     params: {
       title: "Kolor",
       icon: "",
@@ -82,6 +148,7 @@ function Filter() {
         width: "30%",
         justifyContent: "center",
       },
+      key : 'color'
     },
 
     values: [
@@ -112,8 +179,6 @@ function Filter() {
     ],
   });
 
-<<<<<<< HEAD
-  const isMobile = useSelector(state => state.setShowMobile)
   const [slideFilters, setSlideFilters] = useState(false)
   
   const transitions = useTransition(slideFilters, {
@@ -140,13 +205,6 @@ function Filter() {
           <FilterProp filterProp = {colorTable} />
         </animated.div> : '') }
         
-=======
-  return (
-    <div className={"filter-section__wrapper"}>
-      <div className = {'filter-section'}>
-        <FilterProp filterProp = {brandTable} />
-        <FilterProp filterProp = {colorTable} />
->>>>>>> parent of 19dc26c (Filter bug fix)
       </div>
         
     </div>

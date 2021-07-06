@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import '../ClothesPage.css'
+import { animated, useTransition } from 'react-spring';
 import { addFilter, removeFilter } from "../../../actions";
-import {animated, useSpring, useTransition} from 'react-spring'
+import '../ClothesPage.css';
 
 function FilterProp(prop) {
     const dispatch = useDispatch()
@@ -30,7 +30,7 @@ function FilterProp(prop) {
                   <div className = {  item.isCkecked ? 'active' : ''  }
                     onClick={() => {
                       item.isCkecked = !item.isCkecked;
-                      if (item.isCkecked == true) {
+                      if (item.isCkecked === true) {
                         dispatch(
                           addFilter({ key: prop.params.key, value: [item.value] })
                         );

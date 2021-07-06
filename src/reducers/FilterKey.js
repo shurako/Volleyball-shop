@@ -10,7 +10,6 @@ const FilterKey = (state = [], action) => {
                                 const test = state.filter(item => item.key == action.payload.key)
                                 if(!test[0].value.includes(action.payload.value[0])){
                                     test[0].value = test[0].value.concat(action.payload.value)
-                                    console.log(test[0])
                                     return[...state]
                                 }
                                 
@@ -23,10 +22,11 @@ const FilterKey = (state = [], action) => {
                 
                                     const temp = state.filter( item => item.value.includes(action.payload.value[0]))
                                     temp[0].value = temp[0].value.filter(item => item  !== action.payload.value[0] )
-                                    console.log('1')
                                     return [...state]
                                 }
-                                else{ console.log('2'); return state.filter(element => JSON.stringify(element) !== JSON.stringify(action.payload))}
+                                else{ return state.filter(element => JSON.stringify(element) !== JSON.stringify(action.payload))}
+
+        case "SET_CATEGORY" : return [ action.payload]
                                 
                                
         
